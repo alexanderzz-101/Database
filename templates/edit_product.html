@@ -1,0 +1,15 @@
+<a href="{{ url_for('index') }}">Back to Home</a>
+<h1>Edit Product</h1>
+<form method="post">
+    Vendor:
+    <select name="vendor_id">
+        {% for vendor in vendors %}
+        <option value="{{ vendor.vendor_id }}" {% if vendor.vendor_id==product.vendor_id %}selected{% endif %}>{{
+            vendor.name }}</option>
+        {% endfor %}
+    </select><br>
+    Name: <input type="text" name="name" value="{{ product.name }}"><br>
+    Category: <input type="text" name="category" value="{{ product.category }}"><br>
+    Unit: <input type="text" name="unit" value="{{ product.unit }}"><br>
+    <button type="submit">Save Changes</button>
+</form>

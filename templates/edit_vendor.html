@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Vendor</title>
+</head>
+
+<body>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+    <h1>Edit Vendor</h1>
+    <form method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" value="{{ vendor[1] }}" required><br><br>
+
+        <label for="contact_info">Contact Info:</label><br>
+        <input type="text" name="contact_info" value="{{ vendor[2] }}" required><br><br>
+
+        <label for="stall_number">Stall Number:</label><br>
+        <input type="text" name="stall_number" value="{{ vendor[3] }}" required><br><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{{ url_for('vendors') }}">Cancel</a>
+</body>
+
+</html>

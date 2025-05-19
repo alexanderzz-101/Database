@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vendors List</title>
+</head>
+
+<body>
+    <h1>Vendors</h1>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Vendor ID</th>
+                <th>Name</th>
+                <th>Contact Info</th>
+                <th>Stall Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vendor in vendors %}
+            <tr>
+                <td>{{ vendor.vendor_id }}</td>
+                <td>{{ vendor.name }}</td>
+                <td>{{ vendor.contact_info }}</td>
+                <td>{{ vendor.stall_number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

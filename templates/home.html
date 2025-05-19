@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Farmers' Market Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .nav-buttons {
+            margin-top: 30px;
+        }
+
+        .nav-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Farmers' Market System</h1>
+    <p>Select a section to manage:</p>
+
+    <div class="nav-buttons">
+        <a href="{{ url_for('add_vendor') }}">Add Vendor</a>
+        <a href="{{ url_for('vendors') }}">View Vendors</a>
+        <a href="{{ url_for('add_product') }}">Add Product</a>
+
+    </div>
+</body>
+
+</html>
